@@ -1,0 +1,1 @@
+curl -X POST -H "Content-Type: application/json" -d '{"inputs":[{"name":"TEXT","shape":[2],"datatype":"BYTES","data":["Your sentence goes here.", "Another sentence."]}]}' http://localhost:8000/v2/models/transformer_onnx_inference/versions/1/infer
