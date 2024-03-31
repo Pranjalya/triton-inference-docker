@@ -1,0 +1,22 @@
+name: "summarization_bart_large_cnn"
+backend: "python"
+input [
+  {
+    name: "text"
+    data_type: TYPE_STRING
+    dims: [-1]
+  }
+]
+output [
+  {
+    name: "summary_text"
+    data_type: TYPE_STRING
+    dims: [-1]
+  }
+]
+
+instance_group [
+  {
+    kind: KIND_GPU
+  }
+]

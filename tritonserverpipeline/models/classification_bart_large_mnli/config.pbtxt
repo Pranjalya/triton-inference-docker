@@ -1,0 +1,32 @@
+name: "classification_bart_large_mnli"
+backend: "python"
+input [
+  {
+    name: "text"
+    data_type: TYPE_STRING
+    dims: [-1]
+  },
+  {
+    name: "labels"
+    data_type: TYPE_STRING
+    dims: [-1]
+  },
+  {
+    name: "multi_label"
+    data_type: TYPE_BOOL
+    dims: [-1]
+  }
+]
+output [
+  {
+    name: "result"
+    data_type: TYPE_STRING
+    dims: [-1]
+  }
+]
+
+instance_group [
+  {
+    kind: KIND_GPU
+  }
+]

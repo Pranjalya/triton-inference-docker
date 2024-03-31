@@ -1,0 +1,27 @@
+name: "ner_gliner_multilingual"
+backend: "python"
+input [
+  {
+    name: "text"
+    data_type: TYPE_STRING
+    dims: [-1]
+  },
+  {
+    name: "labels"
+    data_type: TYPE_STRING
+    dims: [-1]
+  }
+]
+output [
+  {
+    name: "result"
+    data_type: TYPE_STRING
+    dims: [-1]
+  }
+]
+
+instance_group [
+  {
+    kind: KIND_GPU
+  }
+]
